@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Musify+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/assets/images/icon.png" />
+
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <script>
+    // iOS audio unlock
+    document.addEventListener(
+      "touchstart",
+      () => {
+        const a = new Audio();
+        a.muted = true;
+        a.play().catch(() => {});
+      },
+      { once: true }
+    );
+  </script>
+</head>
+<body>
+  <div id="app">
+    <h1>Musify+</h1>
+
+    <input id="zipInput" type="file" accept=".zip" />
+    <button id="importBtn">Import ZIP</button>
+
+    <h2>Your Library</h2>
+    <ul id="trackList"></ul>
+
+    <audio id="player" controls></audio>
+  </div>
+
+  <script src="/assets/lib/jszip.min.js"></script>
+  <script src="/assets/lib/idb.min.js"></script>
+  <script src="/assets/js/app.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
+</body>
+</html>
