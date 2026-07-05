@@ -27,16 +27,15 @@
   <div id="app">
     <h1>Musify+</h1>
 
-    <div id="dropzone">Drop ZIP here to import your music</div>
+    <div id="dropzone" class="glass">Drop ZIP here to import your music</div>
 
     <h2>Your Library</h2>
-    <ul id="trackList"></ul>
+    <ul id="trackList" class="glass"></ul>
 
     <h2>Now Playing</h2>
-    <audio id="player" controls></audio>
+    <audio id="player" controls class="glass"></audio>
   </div>
 
-  <!-- JSZip and idb from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/idb@7.1.1/build/iife/index-min.js"></script>
 
