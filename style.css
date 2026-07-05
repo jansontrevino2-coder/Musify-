@@ -1,0 +1,78 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Drop zone box */
+#dropzone {
+  width: 100%;
+  padding: 40px;
+  border: 3px dashed #1db954;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  color: #1db954;
+  margin-bottom: 20px;
+  background: #050505;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+#dropzone.active {
+  background: rgba(29, 185, 84, 0.15);
+  border-color: #1ed760;
+  transform: scale(1.02);
+}
+
+/* Track list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #222;
+  background: #050505;
+}
+
+li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background: #111;
+}
+
+/* Audio player */
+audio {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+}
